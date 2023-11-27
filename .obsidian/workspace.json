@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LiteratureReview/Dynamic Neural Networks/Techniques/Skipping Neurons (in FC layers).md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e509a65becc34d82",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "LiteratureReview/Remote Sensing/(2017) No-Reference HSI Quality Assessment.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -160,12 +147,13 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "e509a65becc34d82",
+  "active": "7b178966fff0f89b",
   "lastOpenFiles": [
-    "(2017) No-Reference HSI Quality Assessment.pdf",
+    "LiteratureReview/Dynamic Neural Networks/Techniques/Early exiting.md",
     "LiteratureReview/Dynamic Neural Networks/Techniques/Skipping Neurons (in FC layers).md",
-    "Figures/Pasted image 20231117131055.png",
+    "(2017) No-Reference HSI Quality Assessment.pdf",
     "LiteratureReview/Remote Sensing/(2017) No-Reference HSI Quality Assessment.md",
+    "Figures/Pasted image 20231117131055.png",
     "Figures/Pasted image 20231117130632.png",
     "Figures/Pasted image 20231117130853.png",
     "Figures",
@@ -182,7 +170,6 @@
     "LiteratureReview/Dynamic Neural Networks/(2022) Split Computing and Early Exiting - A Survey.md",
     "LiteratureReview/Dynamic Neural Networks/(2021) DNNs - A Survey.md",
     "LiteratureReview/Techniques/Multi-Scale Dense Networks for Resource Efficient Image Classification.md",
-    "LiteratureReview/Dynamic Neural Networks/Techniques/Early exiting.md",
     "LiteratureReview/Dynamic Neural Networks/(2016) BranchyNet-Fast Inference via Early Exiting from Deep Neural Networks.md",
     "IamNN.md",
     "LiteratureReview/Dynamic Neural Networks/Big-little NN.md",
