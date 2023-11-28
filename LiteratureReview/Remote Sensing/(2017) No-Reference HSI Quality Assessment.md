@@ -45,13 +45,39 @@ The paper aims at assessing the quality of HS images without the need for pristi
 		![[Pasted image 20231117130853.png|600]]
 ##### Proof of Parameter Sensitivity to image quality
 ![[Pasted image 20231117131055.png|500]]
+#### Methodology
+- Each of the aforementioned features are extracted from the different spectral and spatial properties of the image blocks and fitted to their corresponding distributions: GGD or Weibull
+- Each feature vector is a representation of an image block
+- The feature vectors are then concatenated into a feature matrix that represents the whole image
+- During training:
+	- The dimension of the feature matrix is reduced using PCA and a projection matrix is 'learned' as a result
+	- Then, the new features are fitted to a Multivariate Gaussian Model and the mean & covariance params are extracted
+- During testing:
+	- The same steps are applied to the test feature matrix and the pre-learned projection matrix is used for PCA this time
+- A distance between the two MVGs' parameters (mean & covariance) is computed and used as the image quality assessment.
+![[Pasted image 20231127145459.png|300]]
+**The following figures give an overview of the process**
+![[Pasted image 20231127144037.png|600]]
+![[Pasted image 20231127144056.png|600]]
 #### Experiments & Settings
 ##### Data
 In their experiments the authors used 2 datasets:
 - AVIRIS sensor data (Moffett Field, Cuprite, Lunar Lake, Indian Piens)
 - HyperspecVC sensor data (Chikusei, Ibaraki, Japan)
-#### Authors' conclusions
-
+##### Experiments
+###### 1. Comparison to reference-based indices
+The proposed ILNIQE is consistent with chosen reference-based metrics
+![[Pasted image 20231127143253.png|500]]
+###### 2. Spectral feature evaluation
+The proposed score is consistent with the SAM(spectral angle mean) index except on the Chikusei2 data, which is explained by the low number of training samples existing in that dataset
+![[Pasted image 20231127143408.png|500]]
+###### 3. Separate spatial features evaluation
+- The Log-Gabor filter feature is the most efficient individually, which is expected thanks to the Log-Gabor filter's ability to extract textures, edges and details
+- The spatial features are not optimal when used individually as quality criteria
+![[Pasted image 20231127143719.png|500]]
+###### 4. Robustness: Cross-dataset evaluation 
+Even with the big difference between training and test datasets in terms of image size and resolution, the model is still consistent with reference-based scores and robust across datasets
+![[Pasted image 20231127143700.png|500]]
 #### Critique/Insights
 - How come pristine images features are not clustered in most spatial quality-sensitive features graphs (fig10-12)?
 - Play around with the panchromatic conversion formula: are those the only weitghts?

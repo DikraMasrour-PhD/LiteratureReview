@@ -12,19 +12,22 @@ tags:
 2. Spatial wise dynamic models: adaptive computation depending on *spatial locations of image data*
 3. Temporal wise dynamic models: adaptive inference for sequential data (e.g. text, video data)
 #### Pros of dynamic computation in DL:
-1. **Computational efficiency**: on-demand computation at test time allocation by selectively activating model components conditioned by the input > avoiding canonical (easy to recognise) & less informative spatial/temporal locations of an input.
-2. **Representation** power: data-dependent architecture/parameters > DNNs have enlarged parameter space > representation power. E.g. Application of feature-conditioned attention weights boosts model capacity.
-3. **Adaptiveness**: dealing with computational budgets on-the-fly > achieve accuracy/efficiency trade-off > DNNs model adaptable to hardware/platform environments
-4. Interpretability: possibility of observing which components are accountable for which inference + bridging the gap between deep models and brains.
+> [!success] Pros
+> 1. **Computational efficiency**: on-demand computation at test time allocation by selectively activating model components conditioned by the input > avoiding canonical (easy to recognise) & less informative spatial/temporal locations of an input.
+> 2. **Representation** power: data-dependent architecture/parameters > DNNs have enlarged parameter space > representation power. E.g. Application of feature-conditioned attention weights boosts model capacity.
+> 3. **Adaptiveness**: dealing with computational budgets on-the-fly > achieve accuracy/efficiency trade-off > DNNs model adaptable to hardware/platform environments
+> 4. Interpretability: possibility of observing which components are accountable for which inference + bridging the gap between deep models and brains.
 ### Survey
 #### Overview
 **Category** | **Subcategory** | **Content** | **Linked reference** 
 ---|---|---|---
 Sample-wise dynamic NNs|Dynamic architectures|Dynamic depth|[[Early exiting]]<br>[[Layer skipping]]
-Sample-wise dynamic NNs|Dynamic architectures|Dynamic width|[[Skipping Neurons (in FC layers)]]<br>[[Skipping branches in MoE]]<br>[[Skipping channels in CNN]]
+Sample-wise dynamic NNs|Dynamic architectures|Dynamic width|[[Skipping Neurons (in FC layers)]]<br>[[Skipping Branches in MoE (Mixture-of-Experts)]]<br>[[Skipping channels in CNN]]
 
-#### Insights/Critique
-- Dynamic architecture > dynamic width > skipping channels in CNNs could be relevant to HS and MS images.
+> [!note] Insights/Critique 
+> - Dynamic architecture > Dynamic width > Skipping channels in CNNs could be relevant to Hyperspectral band selection use case
+
+
 #### ==(references to explore)== 
 ##### Perf. improvement techniques
 - Lightweight models (Andrew G Howard, Menglong Zhu, Bo Chen, Dmitry Kalenichenko, Weijun Wang, Tobias Weyand, Marco Andreetto, and Hartwig Adam. Mobilenets: Efficient convolutional neural networks for mobile vision applications. arXiv preprint arXiv:1704.04861, 2017)

@@ -2,6 +2,7 @@
 tags:
   - DNN
   - Technique
+  - DynamicDepth
 ---
 #### Motivation
 Complexity of input data varies in most scenarios, and shallow networks are usually enough to correctly identify canonical inputs. Thus, it is ideal that these inputs be output early without executing deeper layers, therefore costing more computational power and time.

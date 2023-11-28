@@ -2,6 +2,7 @@
 tags:
   - DNN
   - Technique
+  - DynamicDepth
 ---
 More flexible than EE (early exiting), Layer Skipping allows for the adaptation of network depth on the fly by strategically skipping the calculation of intermediate layers without intermediate classifiers.
 #### Layer skipping schemes
